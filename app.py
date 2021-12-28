@@ -104,6 +104,7 @@ st.header('Story')
 texty2
 key3=0
 takip= """
+
 <!-- Default Statcounter code for intstant_info
 https://share.streamlit.io/ozgurdugmeci/instant-info/main/app.py
 -->
@@ -115,11 +116,11 @@ var sc_security="99a870aa";
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js"
 async></script>
-<noscript><div class="statcounter"><a title="web counter"
+<noscript><div class="statcounter"><a title="Web Analytics"
 href="https://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="https://c.statcounter.com/12694874/0/99a870aa/1/"
-alt="web counter"
+alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
 
