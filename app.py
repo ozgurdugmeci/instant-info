@@ -125,6 +125,6 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
 
 """
-#st.markdown(takip, unsafe_allow_html=True)  
-components.html(takip,width=200, height=200)
+st.markdown(takip, unsafe_allow_html=True)  
+#components.html(takip,width=200, height=200)
 
