@@ -89,7 +89,9 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 #texty= 'Ahh ahh ahh ve derken siz niye Ahh aHh ahH    yapma AHH yapma   YapMA'
 # Create and generate a word cloud image:
-wordcloud = WordCloud(background_color='whitesmoke',  max_words=40, max_font_size=80, relative_scaling=0.5 ).generate(texty.lower())
+
+wordcloud = WordCloud(background_color='whitesmoke',  max_words=40, max_font_size=80, relative_scaling=1.0 ).generate(texty.lower())
+
 
 # Display the generated image:
 plt.imshow(wordcloud, interpolation='bilinear')
