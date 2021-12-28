@@ -1,3 +1,9 @@
+import streamlit as st
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import os
+import tweepy as tw
+
 st.sidebar.title('Instant Info ')
 
 st.sidebar.write('Enter criterias and press enter. Application will get the latest tweets upon your search and the language you choose.')
