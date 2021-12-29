@@ -34,7 +34,7 @@ texty2=''
 for tweet in tw.Cursor(api.search_tweets, q=ara, lang=langu, count=100).items(100):
  say2=say2+1
  a=tweet.text
- texty2= a+ '\n'+ texty2
+ texty2= a+ '<br>'+ texty2
  listo=a.split()
   
 
@@ -104,7 +104,8 @@ plt.axis("off")
 st.header('Summary')
 st.pyplot()
 st.header('Story')
-texty2
+st.markdown(texty2, unsafe_allow_html=True)
+
 key3=0
 takip= """
 
