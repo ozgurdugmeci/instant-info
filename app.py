@@ -30,7 +30,7 @@ api = tw.API(auth)
 texty=''
 ana=[]
 son=[]
-texty2=''
+texty2=' '
 for tweet in tw.Cursor(api.search_tweets, q=ara, lang=langu, count=100).items(100):
  say2=say2+1
  a=tweet.text
@@ -104,8 +104,8 @@ plt.axis("off")
 st.header('Summary')
 st.pyplot()
 st.header('Story')
-#st.markdown(texty2, unsafe_allow_html=True)
-texty2
+st.markdown(texty2, unsafe_allow_html=True)
+#texty2
 key3=0
 takip= """
 
