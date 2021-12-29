@@ -108,9 +108,10 @@ try:
  st.markdown(texty2, unsafe_allow_html=True)
  #texty2
  key3=0
- takip= """
+ 
 except:
  'No result. Please control search criterias'
+takip= """
 <!-- Default Statcounter code for intstant_info
 https://share.streamlit.io/ozgurdugmeci/instant-info/main/app.py
 -->
