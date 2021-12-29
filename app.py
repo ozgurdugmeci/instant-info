@@ -104,7 +104,7 @@ plt.axis("off")
 st.header('Summary')
 st.pyplot()
 st.header('Story')
-st.markdown(texty2, unsafe_allow_html=True)
+#st.markdown(texty2, unsafe_allow_html=True)
 
 key3=0
 takip= """
