@@ -104,7 +104,7 @@ try:
 
  st.header('Summary')
  st.pyplot()
- st.header('Story')
+ st.header('News')
  st.markdown(texty2, unsafe_allow_html=True)
  #texty2
  key3=0
