@@ -110,7 +110,7 @@ try:
  key3=0
   
 except:
- 'Twitter search api no longer free. Thanks Elon'
+ 'Twitter search api no longer free. Thanks Elon.'
 takip= """
 <!-- Default Statcounter code for intstant_info
 https://share.streamlit.io/ozgurdugmeci/instant-info/main/app.py
