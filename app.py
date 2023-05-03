@@ -25,91 +25,91 @@ consumer_secret= st.secrets["consumer_secret"]
 
 say2=1
 say=0
-try:
- auth = tw.AppAuthHandler(consumer_key, consumer_secret)
- api = tw.API(auth)
- texty=''
- ana=[]
- son=[]
- texty2=' '
- for tweet in tw.Cursor(api.search_tweets, q=ara, lang=langu, count=100).items(100):
-  say2=say2+1
-  a=tweet.text
-  texty2= a+ '<br>'+ texty2
-  listo=a.split()
-  
+#try:
+auth = tw.AppAuthHandler(consumer_key, consumer_secret)
+api = tw.API(auth)
+texty=''
+ana=[]
+son=[]
+texty2=' '
+for tweet in tw.Cursor(api.search_tweets, q=ara, lang=langu, count=100).items(100):
+ say2=say2+1
+ a=tweet.text
+ texty2= a+ '<br>'+ texty2
+ listo=a.split()
+ 
 
-   
-  for i in listo:
   
-   i=str(i)
-   i=i.lower()
-   i=i.strip()
-  
-   if i.startswith('http') or i.startswith('rt') or i.startswith('@') or i=='rt' or ord(i[0])>8000: 
-  
-    say=say+1
-   else:
-    ana.append(i)
-
- texty= ' '.join(ana)
- son=texty.split()
-
- ana=[]
-
- for i in son:
-  for z in i:
-   if ord(z)>400:
-   
-    i= i.replace(z,' '+z)
-   
-  ana.append(i)
-  
-
- texty= ' '.join(ana)
- son=[]
- son =texty.split()
- ana=[]
- for i in son:
+ for i in listo:
+ 
   i=str(i)
   i=i.lower()
   i=i.strip()
-  
-  if ord(i[0])>8000: 
+ 
+  if i.startswith('http') or i.startswith('rt') or i.startswith('@') or i=='rt' or ord(i[0])>8000: 
+ 
    say=say+1
   else:
    ana.append(i)
- texty=''
- texty= ' '.join(ana)
 
+texty= ' '.join(ana)
+son=texty.split()
 
+ana=[]
 
- st.set_option('deprecation.showPyplotGlobalUse', False)
-
- # Create some sample text
-
- #texty= 'Ahh ahh ahh ve derken siz niye Ahh aHh ahH    yapma AHH yapma   YapMA'
- # Create and generate a word cloud image:
-
- wordcloud = WordCloud(background_color='whitesmoke',  max_words=40, max_font_size=65, relative_scaling=1.0 ).generate(texty.lower())
-
-
- # Display the generated image:
- plt.imshow(wordcloud, interpolation='bilinear')
-
- plt.axis("off")
- #plt.show()
-
+for i in son:
+ for z in i:
+  if ord(z)>400:
   
-
- st.header('Summary')
- st.pyplot()
- st.header('News')
- st.markdown(texty2, unsafe_allow_html=True)
- #texty2
- key3=0
+   i= i.replace(z,' '+z)
+  
+ ana.append(i)
  
-except:
+
+texty= ' '.join(ana)
+son=[]
+son =texty.split()
+ana=[]
+for i in son:
+ i=str(i)
+ i=i.lower()
+ i=i.strip()
+ 
+ if ord(i[0])>8000: 
+  say=say+1
+ else:
+  ana.append(i)
+texty=''
+texty= ' '.join(ana)
+
+
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
+# Create some sample text
+
+#texty= 'Ahh ahh ahh ve derken siz niye Ahh aHh ahH    yapma AHH yapma   YapMA'
+# Create and generate a word cloud image:
+
+wordcloud = WordCloud(background_color='whitesmoke',  max_words=40, max_font_size=65, relative_scaling=1.0 ).generate(texty.lower())
+
+
+# Display the generated image:
+plt.imshow(wordcloud, interpolation='bilinear')
+
+plt.axis("off")
+#plt.show()
+
+ 
+
+st.header('Summary')
+st.pyplot()
+st.header('News')
+st.markdown(texty2, unsafe_allow_html=True)
+#texty2
+key3=0
+ 
+#except:
  'No result. Please control search criterias'
 takip= """
 <!-- Default Statcounter code for intstant_info
