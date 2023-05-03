@@ -110,7 +110,7 @@ st.markdown(texty2, unsafe_allow_html=True)
 key3=0
  
 #except:
- 'No result. Please control search criterias'
+'No result. Please control search criterias'
 takip= """
 <!-- Default Statcounter code for intstant_info
 https://share.streamlit.io/ozgurdugmeci/instant-info/main/app.py
