@@ -25,7 +25,7 @@ consumer_secret= st.secrets["consumer_secret"]
 
 say2=1
 say=0
-#try:
+try:
 auth = tw.AppAuthHandler(consumer_key, consumer_secret)
 api = tw.API(auth)
 texty=''
@@ -109,8 +109,9 @@ st.markdown(texty2, unsafe_allow_html=True)
 #texty2
 key3=0
  
-#except:
-'No result. Please control search criterias'
+except:
+ 'No result. Please control search criterias'
+ 'Twitter search api no longer free''
 takip= """
 <!-- Default Statcounter code for intstant_info
 https://share.streamlit.io/ozgurdugmeci/instant-info/main/app.py
